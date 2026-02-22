@@ -23,6 +23,5 @@ export function useDeepCompareEffect(
     signalRef.current++;
   }
 
-  // eslint-disable-next-line react-hooks/exhaustive-deps
   useEffect(effect, [signalRef.current]);
 }

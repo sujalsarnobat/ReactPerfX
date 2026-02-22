@@ -14,7 +14,7 @@
     "build:ts": "tsc --noEmit",
     "test": "jest",
     "test:coverage": "jest --coverage",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "prepublishOnly": "npm run lint && npm test && npm run build"
   },
   "keywords": [
