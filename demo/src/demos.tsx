@@ -97,12 +97,12 @@ export function WhyDidYouRenderDemo() {
             }
             origLog(...args);
         };
-        console.groupEnd = (...args: unknown[]) => {
+        console.groupEnd = () => {
             if (buffer.length > 0) {
                 setChangeLog((prev) => [...prev.slice(-4), ...buffer]);
                 buffer.length = 0;
             }
-            origEnd(...args);
+            origEnd();
         };
 
         return () => {
@@ -415,7 +415,7 @@ export function ThrottleDemo() {
                         bottom: 0,
                         width: "3px",
                         background: "var(--green)",
-                        boxShadow: "0 0 10px var(--green-glow)",
+                        boxShadow: "0 0 6px rgba(0,128,0,0.3)",
                         transition: "left 0.1s ease-out",
                     }}
                 />
